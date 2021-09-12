@@ -8,20 +8,26 @@ void printbinchar(char c)
     {
         putchar((c & (1 << i)) ? '1' : '0');
     }
-    // putchar('\n');
 }
 
 int main()
 {
-    // printf("%f\n", log10((double)32) / log10((double)2));
-    int size;
-    char *blocks = create_blocks(33, &size);
-    printf("Amount of bytes: %d\n", size);
-    for (int i = 0; i < size; i++)
-    {
-        // *(blocks + i) = 'A';
-        printbinchar(*(blocks + i));
-    }
-    printf("\n");
+    // int data_size = 4; // We can store 4 bytes
+    // int block_size;    // How much storage everything is going to take
+    // // Create blocks of 8 bit chars to fit in the data
+    // char *blocks = create_blocks(data_size * 4, &block_size);
+    // for (int i = 0; i < block_size; i++)
+    // {
+    //     printbinchar(*(blocks + i));
+    // }
+    // printf("\n");
+
+    // char data[] = {'A', 'B', 'C', 'D'};
+    // int error_code = put_data(&data[0], data_size, blocks, block_size);
+
+    char test = 'B';
+    printf("%d\n", (int)test);
+    printf("%d\n", check_parity(test));
+
     return 0;
 }
